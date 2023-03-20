@@ -12,7 +12,6 @@ public class TheDeepGrotto extends YaegerGame {
     public void setupGame() {
         setGameTitle("TheDeepGrotto");
         setSize(new Size(800, 600));
-        //hoi
     }
 
     @Override
