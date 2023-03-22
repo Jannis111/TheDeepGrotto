@@ -8,15 +8,16 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-public class IntroScene extends SceneBody{
+public class IntroScene extends SceneBody {
     public IntroScene(TheDeepGrotto theDeepGrotto) {
         super(theDeepGrotto);
+
     }
 
     @Override
     public void setupEntities() {
         var introSceneText = new TextEntity(
-                new Coordinate2D(getWidth()/2,getHeight()/2), "Let's go on an adventure"
+                new Coordinate2D(getWidth() / 2, getHeight() / 2), "Let's go on an adventure"
         );
         introSceneText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         introSceneText.setFill(Color.BLACK);
