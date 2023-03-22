@@ -12,12 +12,11 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class Button extends TextEntity implements MouseButtonPressedListener, MouseEnterListener, MouseExitListener {
-   private TheDeepGrotto theDeepGrotto;
+
     public Button(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, String naamButton, Color color, Font font) {
         super(initialLocation, naamButton);
         setFill(color);
         setFont(font);
-        this.theDeepGrotto = theDeepGrotto;
     }
 
     @Override
