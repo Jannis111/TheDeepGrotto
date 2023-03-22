@@ -11,12 +11,10 @@ public class TheDeepGrotto extends YaegerGame {
     @Override
     public void setupGame() {
         setGameTitle("TheDeepGrotto");
-        setSize(new Size(800, 600));
-        //aapje
+        setSize(new Size(800, 800));
     }
 
     @Override
     public void setupScenes() {
-
     }
 }
