@@ -6,6 +6,7 @@ import com.github.hanyaeger.tutorial.scenes.GameOverScene;
 import com.github.hanyaeger.tutorial.scenes.IntroScene;
 import com.github.hanyaeger.tutorial.scenes.StartScene;
 import com.github.hanyaeger.tutorial.scenes.WinScene;
+import com.github.hanyaeger.tutorial.scenes.levels.TestLevel;
 
 public class TheDeepGrotto extends YaegerGame {
     public static void main(String[] args) {
@@ -24,5 +25,6 @@ public class TheDeepGrotto extends YaegerGame {
         addScene(2, new IntroScene(this));
         addScene(3, new GameOverScene(this));
         addScene(4, new WinScene(this));
+        addScene(99, new TestLevel(this));
     }
 }
