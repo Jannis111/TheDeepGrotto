@@ -13,7 +13,6 @@ public class IntroScene extends SceneBody {
     TheDeepGrotto theDeepGrotto;
 
     public IntroScene(TheDeepGrotto theDeepGrotto) {
-        super(theDeepGrotto);
         this.theDeepGrotto = theDeepGrotto;
     }
 
@@ -23,9 +22,9 @@ public class IntroScene extends SceneBody {
                 new Coordinate2D(getWidth() / 2, getHeight() / 2), "Let's go on an adventure"
         );
         introSceneText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        introSceneText.setFill(Color.BLACK);
+        introSceneText.setFill(Color.WHITE);
         introSceneText.setFont(Font.font("Serif", FontWeight.BOLD, 70));
         addEntity(introSceneText);
-        addEntity(new StartGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 75), theDeepGrotto, "Start game", Color.PURPLE, Font.font("Roboto", FontWeight.BOLD, 30)));
+        addEntity(new StartGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 75), theDeepGrotto, "Start game", Color.WHITE, Font.font("Roboto", FontWeight.BOLD, 30)));
     }
 }

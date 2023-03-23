@@ -14,7 +14,6 @@ public class GameOverScene extends SceneBody {
     TheDeepGrotto theDeepGrotto;
 
     public GameOverScene(TheDeepGrotto theDeepGrotto) {
-        super(theDeepGrotto);
         this.theDeepGrotto = theDeepGrotto;
     }
 
@@ -24,10 +23,10 @@ public class GameOverScene extends SceneBody {
                 new Coordinate2D(getWidth() / 2, getHeight() / 2), "You lost"
         );
         gameOverSceneText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        gameOverSceneText.setFill(Color.BLACK);
+        gameOverSceneText.setFill(Color.WHITE);
         gameOverSceneText.setFont(Font.font("Serif", FontWeight.BOLD, 70));
         addEntity(gameOverSceneText);
-        addEntity(new StartGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 75), theDeepGrotto, "Start game", Color.PURPLE, Font.font("Roboto", FontWeight.BOLD, 30)));
-        addEntity(new ExiteGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 150), theDeepGrotto, "Exit game", Color.PURPLE, Font.font("Roboto", FontWeight.BOLD, 30)));
+        addEntity(new StartGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 75), theDeepGrotto, "Start game", Color.WHITE, Font.font("Roboto", FontWeight.BOLD, 30)));
+        addEntity(new ExiteGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 150), theDeepGrotto, "Exit game", Color.WHITE, Font.font("Roboto", FontWeight.BOLD, 30)));
     }
 }

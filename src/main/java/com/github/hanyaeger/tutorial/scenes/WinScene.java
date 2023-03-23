@@ -9,8 +9,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 public class WinScene extends SceneBody {
+    TheDeepGrotto theDeepGrotto;
+
     public WinScene(TheDeepGrotto theDeepGrotto) {
-        super(theDeepGrotto);
+        this.theDeepGrotto = theDeepGrotto;
     }
 
     public void setupEntities() {
@@ -18,7 +20,7 @@ public class WinScene extends SceneBody {
                 new Coordinate2D(getWidth() / 2, getHeight() / 2), "You win"
         );
         winSceneText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        winSceneText.setFill(Color.BLACK);
+        winSceneText.setFill(Color.WHITE);
         winSceneText.setFont(Font.font("Serif", FontWeight.BOLD, 70));
         addEntity(winSceneText);
     }

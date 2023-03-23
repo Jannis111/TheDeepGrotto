@@ -26,13 +26,13 @@ public class Button extends TextEntity implements MouseButtonPressedListener, Mo
 
     @Override
     public void onMouseEntered() {
-        setFill(Color.VIOLET);
+        setFill(Color.LIGHTBLUE);
         setCursor(Cursor.HAND);
     }
 
     @Override
     public void onMouseExited() {
-        setFill(Color.PURPLE);
+        setFill(Color.WHITE);
         setCursor(Cursor.DEFAULT);
     }
 }
