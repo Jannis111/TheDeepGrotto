@@ -13,7 +13,7 @@ import java.util.Set;
 public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided {
 
     public Henk(Coordinate2D initialLocation) {
-        super("sprites/henkIdle.png", initialLocation, new Size(30, 30), 1, 2);
+        super("sprites/henkIdle.png", initialLocation, new Size(30, 30), 1, 4);
     }
 
     @Override
