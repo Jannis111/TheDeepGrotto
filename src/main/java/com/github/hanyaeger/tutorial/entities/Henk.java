@@ -38,6 +38,12 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
 
     @Override
     public void onCollision(Collider collider) {
-        
+        System.out.println("collision");
+        --health;
+        if (health == 0) {
+            this.theDeepGrotto.setActiveScene(3);
+            health = 10;
+        }
+
     }
 }
