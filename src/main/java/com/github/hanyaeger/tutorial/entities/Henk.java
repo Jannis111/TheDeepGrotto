@@ -4,9 +4,12 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.SceneBorderTouchingWatcher;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
+import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
+import com.github.hanyaeger.tutorial.entities.map.Door;
 import com.github.hanyaeger.tutorial.entities.map.NukeBomb;
 import com.github.hanyaeger.tutorial.entities.map.StrongBomb;
 import com.github.hanyaeger.tutorial.entities.map.Wall;
@@ -15,7 +18,7 @@ import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
-public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided {
+public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided, SceneBorderTouchingWatcher {
     private static int health = 10;
     public static int strongBomb = 0;
     public static int nukeBomb = 0;
@@ -79,6 +82,8 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
             gui.setGUIText(health, ++strongBomb, nukeBomb);
         } else if (collider instanceof NukeBomb) {
             gui.setGUIText(health, strongBomb, ++nukeBomb);
+        } else if (collider instanceof Door) {
+            this.theDeepGrotto.setActiveScene(4);
         } else {
             --health;
             System.out.println("collision");
@@ -92,5 +97,26 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
             nukeBomb = 0;
         }
 
+    }
+
+    @Override
+    public void notifyBoundaryTouching(SceneBorder border) {
+        setSpeed(0);
+
+        switch (border) {
+            case TOP:
+                setAnchorLocationY(1);
+                break;
+            case BOTTOM:
+                setAnchorLocationY(getSceneHeight() - getHeight() - 1);
+                break;
+            case LEFT:
+                setAnchorLocationX(1);
+                break;
+            case RIGHT:
+                setAnchorLocationX(getSceneWidth() - getWidth() - 1);
+            default:
+                break;
+        }
     }
 }

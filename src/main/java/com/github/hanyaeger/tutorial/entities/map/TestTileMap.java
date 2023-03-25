@@ -10,6 +10,7 @@ public class TestTileMap extends TileMap {
         addEntity(1, Wall.class, "sprites/wall.png");
         addEntity(2, StrongBomb.class, "sprites/bomb.png");
         addEntity(3, NukeBomb.class, "sprites/nuke.png");
+        addEntity(4, Door.class, "sprites/door.png");
     }
 
     @Override
@@ -28,7 +29,7 @@ public class TestTileMap extends TileMap {
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1},
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
-                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1},
+                {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 4},
                 {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
         };
