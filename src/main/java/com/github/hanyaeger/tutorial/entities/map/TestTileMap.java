@@ -7,7 +7,7 @@ public class TestTileMap extends TileMap {
 
     @Override
     public void setupEntities() {
-        addEntity(1, Wall.class, "backgrounds/levelBackground.png");
+        addEntity(1, Wall.class, "sprites/wall.png");
     }
 
     @Override

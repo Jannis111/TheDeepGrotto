@@ -14,7 +14,7 @@ import javafx.scene.input.KeyCode;
 import java.util.Set;
 
 public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided {
-    private static int health = 1;
+    private static int health = 10;
     private static int bomb = 1;
     private TheDeepGrotto theDeepGrotto;
     private GUI gui;
@@ -46,11 +46,11 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
 
     @Override
     public void onCollision(Collider collider) {
-        System.out.println("collision");
         if (collider instanceof Wall) {
             setSpeed(0);
         } else {
             --health;
+            System.out.println("collision");
         }
         if (health == 0) {
             this.theDeepGrotto.setActiveScene(3);

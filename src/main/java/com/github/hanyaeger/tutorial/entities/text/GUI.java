@@ -15,6 +15,6 @@ public class GUI extends TextEntity {
     }
 
     public void setGUIText(int health, int bomb) {
-        setText("Health: " + health + " | " + "Bombs: " + bomb);
+        setText("Health: " + health + " | " + "Bombs: " + bomb + " | ");
     }
 }
