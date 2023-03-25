@@ -31,7 +31,7 @@ public class TestLevel extends DynamicScene implements TileMapContainer, EntityS
     public void setupEntities() {
         var gui = new GUI(new Coordinate2D(10, 10));
         addEntity(gui);
-        Henk player = new Henk(new Coordinate2D(100, 100), theDeepGrotto, gui);
+        Henk player = new Henk(new Coordinate2D(60, 60), theDeepGrotto, gui);
         addEntity(player);
         GoblinStatic goblinStatic = new GoblinStatic(new Coordinate2D(500, 500));
         addEntity(goblinStatic);
@@ -50,6 +50,6 @@ public class TestLevel extends DynamicScene implements TileMapContainer, EntityS
 
     @Override
     public void setupEntitySpawners() {
-        addEntitySpawner(new ArrowSpawner(getWidth(), getHeight()));
+//        addEntitySpawner(new ArrowSpawner(getWidth(), getHeight()));
     }
 }

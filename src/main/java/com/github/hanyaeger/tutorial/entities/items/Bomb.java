@@ -8,12 +8,12 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 import com.github.hanyaeger.api.media.SoundClip;
 import com.github.hanyaeger.tutorial.entities.Henk;
 
-public class Bomb extends SpriteEntity implements Collided {
+public class Bomb extends SpriteEntity implements Collided, Collider {
     public Bomb(Coordinate2D location, Size size, String resource) {
         super(resource, location, size);
     }
 
-    public void useBomb() {
+    public static void useBomb() {
         var explosion = new SoundClip("audio/explosion.wav");
         explosion.play();
     }

@@ -14,7 +14,7 @@ public class GUI extends TextEntity {
         setFill(Color.BLACK);
     }
 
-    public void setGUIText(int health, int bomb) {
-        setText("Health: " + health + " | " + "Bombs: " + bomb + " | ");
+    public void setGUIText(int health, int strongBomb, int nukeBomb) {
+        setText("Health: " + health + " | " + "StrongBombs: " + strongBomb + " | " + "NukeBombs: " + nukeBomb);
     }
 }
