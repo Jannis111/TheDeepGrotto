@@ -26,16 +26,7 @@ public class TestLevel extends DynamicScene implements EntitySpawnerContainer {
 
     @Override
     public void setupEntities() {
-        Henk player = new Henk(new Coordinate2D(100, 100), theDeepGrotto);
-        addEntity(player);
-        GoblinStatic goblinStatic = new GoblinStatic(new Coordinate2D(500, 500));
-        addEntity(goblinStatic);
-        HobGoblin hobGoblin = new HobGoblin(new Coordinate2D(300, 300));
-        addEntity(hobGoblin);
-        GoblinMobile goblinMobile = new GoblinMobile(new Coordinate2D(200, 200));
-        addEntity(goblinMobile);
-        Frank frank = new Frank(new Coordinate2D(600, 600));
-        addEntity(frank);
+        
     }
 
     @Override
