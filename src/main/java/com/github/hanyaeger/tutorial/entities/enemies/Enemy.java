@@ -3,13 +3,15 @@ package com.github.hanyaeger.tutorial.entities.enemies;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
-import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
+import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.entities.Henk;
+import javafx.scene.input.KeyCode;
 
-public class Enemy extends DynamicCompositeEntity implements Collider {
+import java.util.Set;
+
+public class Enemy extends DynamicCompositeEntity implements Collider, KeyListener {
     public Enemy(Coordinate2D location) {
         super(location);
-
-
     }
 
     @Override
@@ -17,5 +19,12 @@ public class Enemy extends DynamicCompositeEntity implements Collider {
 
     }
 
-
+    @Override
+    public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
+        if (pressedKeys.contains(KeyCode.V)) {
+            if (Henk.nukeBomb >= 1) {
+                remove();
+            }
+        }
+    }
 }

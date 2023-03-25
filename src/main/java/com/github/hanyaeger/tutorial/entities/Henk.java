@@ -17,8 +17,8 @@ import java.util.Set;
 
 public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided {
     private static int health = 10;
-    private static int strongBomb = 0;
-    private static int nukeBomb = 0;
+    public static int strongBomb = 0;
+    public static int nukeBomb = 0;
     private TheDeepGrotto theDeepGrotto;
     private GUI gui;
     private int direction;
