@@ -6,14 +6,19 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.TheDeepGrotto;
 import javafx.scene.input.KeyCode;
 
 import java.util.Set;
 
 public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided {
+    private static int health = 1;
+    TheDeepGrotto theDeepGrotto;
 
-    public Henk(Coordinate2D initialLocation) {
+    public Henk(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto) {
         super("sprites/henkIdle.png", initialLocation, new Size(30, 30), 1, 4);
+
+        this.theDeepGrotto = theDeepGrotto;
     }
 
     @Override
@@ -33,6 +38,11 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
 
     @Override
     public void onCollision(Collider collider) {
-
+        System.out.println("collision");
+        --health;
+        if (health == 0) {
+            this.theDeepGrotto.setActiveScene(3);
+            health = 10;
+        }
     }
 }
