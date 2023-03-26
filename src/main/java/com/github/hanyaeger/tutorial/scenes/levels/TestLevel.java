@@ -1,7 +1,6 @@
 package com.github.hanyaeger.tutorial.scenes.levels;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.EntitySpawnerContainer;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
@@ -11,11 +10,10 @@ import com.github.hanyaeger.tutorial.entities.enemies.GoblinStatic.GoblinStatic;
 import com.github.hanyaeger.tutorial.entities.enemies.Hobgoblin.HobGoblin;
 import com.github.hanyaeger.tutorial.entities.enemies.frank.Frank;
 import com.github.hanyaeger.tutorial.entities.map.TestTileMap;
-import com.github.hanyaeger.tutorial.entities.spawner.ArrowSpawner;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 
-public class TestLevel extends DynamicScene implements TileMapContainer, EntitySpawnerContainer {
-    private TheDeepGrotto theDeepGrotto;
+public class TestLevel extends DynamicScene implements TileMapContainer {
+    private final TheDeepGrotto theDeepGrotto;
 
     public TestLevel(TheDeepGrotto theDeepGrotto) {
         this.theDeepGrotto = theDeepGrotto;
@@ -46,10 +44,5 @@ public class TestLevel extends DynamicScene implements TileMapContainer, EntityS
     @Override
     public void setupTileMaps() {
         addTileMap(new TestTileMap());
-    }
-
-    @Override
-    public void setupEntitySpawners() {
-//        addEntitySpawner(new ArrowSpawner(getWidth(), getHeight()));
     }
 }

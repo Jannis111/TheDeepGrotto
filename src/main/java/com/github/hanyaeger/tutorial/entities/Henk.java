@@ -9,10 +9,7 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
-import com.github.hanyaeger.tutorial.entities.map.Door;
-import com.github.hanyaeger.tutorial.entities.map.NukeBomb;
-import com.github.hanyaeger.tutorial.entities.map.StrongBomb;
-import com.github.hanyaeger.tutorial.entities.map.Wall;
+import com.github.hanyaeger.tutorial.entities.map.*;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 import javafx.scene.input.KeyCode;
 
@@ -22,8 +19,8 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
     private static int health = 10;
     public static int strongBomb = 0;
     public static int nukeBomb = 0;
-    private TheDeepGrotto theDeepGrotto;
-    private GUI gui;
+    private final TheDeepGrotto theDeepGrotto;
+    private final GUI gui;
     private int direction;
 
     public Henk(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, GUI gui) {
@@ -83,9 +80,10 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         } else if (collider instanceof NukeBomb) {
             gui.setGUIText(health, strongBomb, ++nukeBomb);
         } else if (collider instanceof Door) {
-            this.theDeepGrotto.setActiveScene(4);
+            this.theDeepGrotto.setActiveScene(100);
+        } else if (collider instanceof BossButton) {
+            //Hier moet iets worden aangeroepen dat Frank damage krijgt.
         } else {
-            --health;
             System.out.println("collision");
             setAnchorLocation(new Coordinate2D(60, 60));
             gui.setGUIText(--health, strongBomb, nukeBomb);
