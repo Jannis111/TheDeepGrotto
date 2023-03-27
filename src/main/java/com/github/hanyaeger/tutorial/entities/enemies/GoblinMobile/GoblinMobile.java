@@ -12,7 +12,7 @@ public class GoblinMobile extends Goblin {
 
     public GoblinMobile(Coordinate2D initialLocation) {
         super(initialLocation);
-        setMotion(2, 270);
+        setMotion(2, direction);
 
     }
 
@@ -24,8 +24,6 @@ public class GoblinMobile extends Goblin {
         addEntity(goblinMobileSprite);
         addEntity(goblinMobileHitbox);
 
-        //System.out.println(goblinMobileSprite.getAnchorLocation());
-        //System.out.println(goblinMobileHitbox.getAnchorLocation());
     }
 
 

@@ -8,19 +8,17 @@ import com.github.hanyaeger.tutorial.entities.Henk;
 import com.github.hanyaeger.tutorial.entities.enemies.GoblinMobile.GoblinMobile;
 import com.github.hanyaeger.tutorial.entities.enemies.GoblinStatic.GoblinStatic;
 import com.github.hanyaeger.tutorial.entities.enemies.Hobgoblin.HobGoblin;
-import com.github.hanyaeger.tutorial.entities.map.RoomOneLevelOneMap;
 import com.github.hanyaeger.tutorial.entities.map.RoomTwoLevelOneMap;
 import com.github.hanyaeger.tutorial.entities.text.BossHealthText;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 
 public class RoomTwoLevelOne extends DynamicScene implements TileMapContainer {
+    private TheDeepGrotto theDeepGrotto;
 
     public RoomTwoLevelOne(TheDeepGrotto theDeepGrotto) {
         this.theDeepGrotto = theDeepGrotto;
 
     }
-
-    private TheDeepGrotto theDeepGrotto;
 
 
     @Override
