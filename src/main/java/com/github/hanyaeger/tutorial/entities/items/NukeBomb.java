@@ -1,4 +1,4 @@
-package com.github.hanyaeger.tutorial.entities.map;
+package com.github.hanyaeger.tutorial.entities.items;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;

@@ -1,6 +1,7 @@
 package com.github.hanyaeger.tutorial.entities.enemies;
 
 import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.DynamicCompositeEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
@@ -10,8 +11,10 @@ import javafx.scene.input.KeyCode;
 import java.util.Set;
 
 public class Enemy extends DynamicCompositeEntity implements Collider, KeyListener {
-    public Enemy(Coordinate2D location) {
-        super(location);
+
+
+    protected Enemy(Coordinate2D initialLocation) {
+        super(initialLocation);
     }
 
     @Override

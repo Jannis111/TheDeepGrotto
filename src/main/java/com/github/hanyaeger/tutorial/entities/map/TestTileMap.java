@@ -1,6 +1,9 @@
 package com.github.hanyaeger.tutorial.entities.map;
 
 import com.github.hanyaeger.api.scenes.TileMap;
+import com.github.hanyaeger.tutorial.entities.enemies.Hobgoblin.HobGoblin;
+import com.github.hanyaeger.tutorial.entities.items.NukeBomb;
+import com.github.hanyaeger.tutorial.entities.items.StrongBomb;
 
 public class TestTileMap extends TileMap {
 

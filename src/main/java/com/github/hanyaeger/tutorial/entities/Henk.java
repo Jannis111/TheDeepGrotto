@@ -9,6 +9,8 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
+import com.github.hanyaeger.tutorial.entities.items.NukeBomb;
+import com.github.hanyaeger.tutorial.entities.items.StrongBomb;
 import com.github.hanyaeger.tutorial.entities.map.*;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 import javafx.scene.input.KeyCode;

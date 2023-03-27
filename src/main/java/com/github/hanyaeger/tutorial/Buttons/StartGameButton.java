@@ -18,6 +18,6 @@ public class StartGameButton extends Button {
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        theDeepGrotto.setActiveScene(99);
+        theDeepGrotto.setActiveScene(5);
     }
 }

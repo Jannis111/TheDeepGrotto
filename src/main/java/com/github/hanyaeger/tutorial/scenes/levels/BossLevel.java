@@ -22,7 +22,7 @@ public class BossLevel extends DynamicScene implements TileMapContainer, EntityS
 
     @Override
     public void setupScene() {
-        setBackgroundAudio("audio/backgroundMusic.mp3");
+        setBackgroundAudio("audio/bossMusic.mp3");
         setBackgroundImage("backgrounds/levelBackground.png");
     }
 
