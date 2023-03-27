@@ -15,3 +15,5 @@ public class GoblinStatic extends Goblin {
     }
 
 }
+
+

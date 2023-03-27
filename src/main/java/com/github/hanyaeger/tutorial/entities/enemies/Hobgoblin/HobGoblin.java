@@ -21,7 +21,11 @@ public class HobGoblin extends Goblin {
 
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
-        if (pressedKeys.contains(KeyCode.C)) {
+        if (pressedKeys.contains(KeyCode.V)) {
+            if (Henk.nukeBomb >= 1) {
+                remove();
+            }
+        } else if (pressedKeys.contains(KeyCode.C)) {
             if (Henk.strongBomb >= 1) {
                 remove();
             }

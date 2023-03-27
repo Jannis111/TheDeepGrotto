@@ -67,13 +67,13 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         if (collider instanceof Wall) {
             setSpeed(0);
             if (direction == 0) {
-                setAnchorLocationY(getAnchorLocation().getY() - 1);
+                setAnchorLocationY(getAnchorLocation().getY() - 2);
             } else if (direction == 90) {
-                setAnchorLocationX(getAnchorLocation().getX() - 1);
+                setAnchorLocationX(getAnchorLocation().getX() - 2);
             } else if (direction == 180) {
-                setAnchorLocationY(getAnchorLocation().getY() + 1);
+                setAnchorLocationY(getAnchorLocation().getY() + 2);
             } else if (direction == 270) {
-                setAnchorLocationX(getAnchorLocation().getX() + 1);
+                setAnchorLocationX(getAnchorLocation().getX() + 2);
             }
         } else if (collider instanceof StrongBomb) {
             gui.setGUIText(health, ++strongBomb, nukeBomb);
