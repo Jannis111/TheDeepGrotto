@@ -3,6 +3,7 @@ package com.github.hanyaeger.tutorial.entities.enemies.Hobgoblin;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.tutorial.entities.Henk;
 import com.github.hanyaeger.tutorial.entities.enemies.Goblin;
+import com.github.hanyaeger.tutorial.entities.enemies.Hitbox;
 import com.github.hanyaeger.tutorial.entities.enemies.Sprite;
 import javafx.scene.input.KeyCode;
 
@@ -16,7 +17,8 @@ public class HobGoblin extends Goblin {
 
     @Override
     protected void setupEntities() {
-        addEntity(new Sprite("sprites/goblinIdle.png", new Coordinate2D(0, 0), 50, 1, 1, 0));
+        addEntity(new Sprite("sprites/goblinIdle.png", new Coordinate2D(0, 0), 80, 1, 4, 0));
+        addEntity(new Hitbox(new Coordinate2D(10, 0), 50, 80));
     }
 
     @Override
