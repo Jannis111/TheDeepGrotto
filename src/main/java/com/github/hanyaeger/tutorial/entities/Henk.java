@@ -9,6 +9,7 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
+import com.github.hanyaeger.tutorial.entities.arrow.Arrow;
 import com.github.hanyaeger.tutorial.entities.items.NukeBomb;
 import com.github.hanyaeger.tutorial.entities.items.StrongBomb;
 import com.github.hanyaeger.tutorial.entities.map.*;
@@ -96,6 +97,8 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
             //Hier moet iets worden aangeroepen dat Frank damage krijgt.
             bossHealth--;
             bossHealthText.setBossHealthText(bossHealth);
+        } else if (collider instanceof Arrow) {
+            gui.setGUIText(--health, strongBomb, nukeBomb);
         } else {
             System.out.println("collision");
             setAnchorLocation(new Coordinate2D(60, 60));
@@ -110,6 +113,9 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         if (bossHealth < 1) {
             bossHealth = 10;
             this.theDeepGrotto.setActiveScene(4);
+            health = 10;
+            strongBomb = 0;
+            nukeBomb = 0;
         }
     }
 
