@@ -32,13 +32,15 @@ public class RoomTwoLevelOne extends DynamicScene implements TileMapContainer {
         var gui = new GUI(new Coordinate2D(10, 10));
         var bossHealthText = new BossHealthText(new Coordinate2D(500, 10));
         addEntity(gui);
-        GoblinStatic goblinStatic = new GoblinStatic(new Coordinate2D(500, 500));
-        addEntity(goblinStatic);
-        HobGoblin hobGoblin = new HobGoblin(new Coordinate2D(130, 150));
+        GoblinStatic goblinStaticOne = new GoblinStatic(new Coordinate2D(100, 500));
+        addEntity(goblinStaticOne);
+        GoblinStatic goblinStaticTwo = new GoblinStatic(new Coordinate2D(600, 700));
+        addEntity(goblinStaticTwo);
+        HobGoblin hobGoblin = new HobGoblin(new Coordinate2D(670, 170));
         addEntity(hobGoblin);
-        GoblinMobile goblinMobile = new GoblinMobile(new Coordinate2D(200, 550));
+        GoblinMobile goblinMobile = new GoblinMobile(new Coordinate2D(400, 200));
         addEntity(goblinMobile);
-        Henk player = new Henk(new Coordinate2D(50, 60), theDeepGrotto, gui, bossHealthText);
+        Henk player = new Henk(new Coordinate2D(60, 60), theDeepGrotto, gui, bossHealthText);
 
         addEntity(player);
     }

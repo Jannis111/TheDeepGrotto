@@ -36,7 +36,7 @@ public class RoomOneLevelOne extends DynamicScene implements TileMapContainer {
         addEntity(hobGoblin);
         GoblinMobile goblinMobile = new GoblinMobile(new Coordinate2D(200, 550));
         addEntity(goblinMobile);
-        Henk player = new Henk(new Coordinate2D(50, 60), theDeepGrotto, gui, bossHealthText);
+        Henk player = new Henk(new Coordinate2D(60, 60), theDeepGrotto, gui, bossHealthText);
         addEntity(player);
     }
 
