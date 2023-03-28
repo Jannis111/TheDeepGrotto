@@ -19,7 +19,7 @@ public class ArrowSpawner extends EntitySpawner {
 
     @Override
     protected void spawnEntities() {
-        spawn(new Arrow(randomLocation(), 1));
+        spawn(new Arrow(randomLocation(), 2));
     }
 
     private Coordinate2D randomLocation() {

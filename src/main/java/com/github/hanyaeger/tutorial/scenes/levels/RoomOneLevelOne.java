@@ -30,9 +30,9 @@ public class RoomOneLevelOne extends DynamicScene implements TileMapContainer {
         var gui = new GUI(new Coordinate2D(10, 10));
         var bossHealthText = new BossHealthText(new Coordinate2D(500, 10));
         addEntity(gui);
-        GoblinStatic goblinStatic = new GoblinStatic(new Coordinate2D(500, 500));
+        GoblinStatic goblinStatic = new GoblinStatic(new Coordinate2D(500, 150));
         addEntity(goblinStatic);
-        HobGoblin hobGoblin = new HobGoblin(new Coordinate2D(130, 150));
+        HobGoblin hobGoblin = new HobGoblin(new Coordinate2D(150, 150));
         addEntity(hobGoblin);
         GoblinMobile goblinMobile = new GoblinMobile(new Coordinate2D(200, 550));
         addEntity(goblinMobile);

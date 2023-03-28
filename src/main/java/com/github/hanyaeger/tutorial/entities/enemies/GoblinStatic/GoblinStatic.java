@@ -16,8 +16,6 @@ public class GoblinStatic extends Goblin {
 
         addEntity(new Hitbox(new Coordinate2D(0, 0), 50, 50));
     }
-
-
 }
 
 

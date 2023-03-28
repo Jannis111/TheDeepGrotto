@@ -36,7 +36,7 @@ public class BossLevel extends DynamicScene implements TileMapContainer, EntityS
 
         Henk player = new Henk(new Coordinate2D(400, 60), theDeepGrotto, gui, bossHealthText);
         addEntity(player);
-        Frank frank = new Frank(new Coordinate2D(400, 700), bossHealthText, player.getBossHealth());
+        Frank frank = new Frank(new Coordinate2D(360, 700), bossHealthText, player.getBossHealth());
         addEntity(frank);
         BossButton button = new BossButton(new Coordinate2D(200, 200), new Size(30), "sprites/button.png");
         addEntity(button);
