@@ -12,7 +12,7 @@ public class ArrowSpawner extends EntitySpawner {
     private final double sceneHeight;
 
     public ArrowSpawner(double sceneWidth, double sceneHeight) {
-        super(500);
+        super(300);
         this.sceneWidth = sceneWidth;
         this.sceneHeight = sceneHeight;
     }
