@@ -16,10 +16,12 @@ public class BossButton extends SpriteEntity implements Collider, Collided {
 
     @Override
     public void onCollision(Collider collider) {
+        int bufferWidth = 100;
+        int bufferHeight = 100;
         if (collider instanceof Henk) {
             setAnchorLocation(new Coordinate2D(
-                    new Random().nextInt((int) (getSceneWidth() - getWidth())),
-                    new Random().nextInt((int) (getSceneHeight() - getHeight()))));
+                    new Random().nextInt((int) (getSceneWidth() - 2 * bufferWidth)) + bufferWidth,
+                    new Random().nextInt((int) (getSceneHeight() - 2 * bufferHeight)) + bufferHeight));
         }
     }
 }

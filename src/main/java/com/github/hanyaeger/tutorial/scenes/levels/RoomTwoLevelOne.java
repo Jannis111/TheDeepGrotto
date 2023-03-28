@@ -13,7 +13,7 @@ import com.github.hanyaeger.tutorial.entities.text.BossHealthText;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 
 public class RoomTwoLevelOne extends DynamicScene implements TileMapContainer {
-    private TheDeepGrotto theDeepGrotto;
+    private final TheDeepGrotto theDeepGrotto;
 
     public RoomTwoLevelOne(TheDeepGrotto theDeepGrotto) {
         this.theDeepGrotto = theDeepGrotto;

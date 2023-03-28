@@ -30,7 +30,7 @@ public class TheDeepGrotto extends YaegerGame {
         addScene(4, new WinScene(this));
         addScene(5, new RoomOneLevelOne(this));
         addScene(6, new RoomTwoLevelOne(this));
+        addScene(7, new BossLevel(this));
         addScene(99, new TestLevel(this));
-        addScene(100, new BossLevel(this));
     }
 }

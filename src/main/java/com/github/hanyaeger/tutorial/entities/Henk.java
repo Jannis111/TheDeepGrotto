@@ -24,10 +24,11 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
     private static int bossHealth = 10;
     public static int strongBomb = 0;
     public static int nukeBomb = 0;
+    public static int currentScene = 5;
     private final TheDeepGrotto theDeepGrotto;
     private final GUI gui;
 
-    private BossHealthText bossHealthText;
+    private final BossHealthText bossHealthText;
     private int direction;
 
     public Henk(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, GUI gui, BossHealthText bossHealthText) {
@@ -90,7 +91,7 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         } else if (collider instanceof NukeBomb) {
             gui.setGUIText(health, strongBomb, ++nukeBomb);
         } else if (collider instanceof Door) {
-            this.theDeepGrotto.setActiveScene(100);
+            this.theDeepGrotto.setActiveScene(++currentScene);
         } else if (collider instanceof BossButton) {
             //Hier moet iets worden aangeroepen dat Frank damage krijgt.
             bossHealth--;
