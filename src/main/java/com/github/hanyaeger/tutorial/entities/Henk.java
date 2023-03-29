@@ -21,7 +21,7 @@ import java.util.Set;
 
 public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided, SceneBorderTouchingWatcher {
 
-    private static int health = 10;
+    private static int health = 5;
     private static int bossHealth = 10;
     public static int strongBomb = 0;
     public static int nukeBomb = 0;
@@ -132,7 +132,7 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
     }
 
     public void resetStats() {
-        health = 10;
+        health = 5;
         bossHealth = 10;
         strongBomb = 0;
         nukeBomb = 0;
