@@ -6,9 +6,9 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-public class ExiteGameButton extends Button {
+public class ExitGameButton extends Button {
 
-    public ExiteGameButton(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, String nameButton, Color color, Font font) {
+    public ExitGameButton(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, String nameButton, Color color, Font font) {
         super(initialLocation, theDeepGrotto, nameButton, color, font);
     }
 
