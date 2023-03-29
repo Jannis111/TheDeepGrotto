@@ -20,25 +20,21 @@ import javafx.scene.input.KeyCode;
 import java.util.Set;
 
 public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, Collided, SceneBorderTouchingWatcher {
-    private static int health = 10;
 
+    private static int health = 10;
     private static int bossHealth = 10;
     public static int strongBomb = 0;
     public static int nukeBomb = 0;
     private static int currentScene = 5;
     private final TheDeepGrotto theDeepGrotto;
     private final GUI gui;
-
     private final BossHealthText bossHealthText;
     private int direction;
 
     public Henk(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, GUI gui, BossHealthText bossHealthText) {
         super("sprites/henkIdle.png", initialLocation, new Size(30, 30), 1, 4);
-
         this.theDeepGrotto = theDeepGrotto;
-
         this.gui = gui;
-
         this.bossHealthText = bossHealthText;
         gui.setGUIText(health, strongBomb, nukeBomb);
     }
@@ -98,7 +94,6 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         } else if (collider instanceof Arrow) {
             gui.setGUIText(--health, strongBomb, nukeBomb);
         } else {
-            System.out.println("collision");
             setAnchorLocation(new Coordinate2D(60, 60));
             gui.setGUIText(--health, strongBomb, nukeBomb);
         }
@@ -115,7 +110,6 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
     @Override
     public void notifyBoundaryTouching(SceneBorder border) {
         setSpeed(0);
-
         switch (border) {
             case TOP:
                 setAnchorLocationY(1);

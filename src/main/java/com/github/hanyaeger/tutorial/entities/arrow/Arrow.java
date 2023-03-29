@@ -10,11 +10,10 @@ import com.github.hanyaeger.tutorial.entities.Henk;
 import com.github.hanyaeger.tutorial.entities.enemies.Sprite;
 
 public class Arrow extends DynamicCompositeEntity implements Collided, SceneBorderCrossingWatcher, Collider {
+
     public Arrow(Coordinate2D initialLocation, int speed) {
         super(initialLocation);
-
         setMotion(speed, 180);
-
     }
 
     @Override
@@ -25,14 +24,13 @@ public class Arrow extends DynamicCompositeEntity implements Collided, SceneBord
     @Override
     public void onCollision(Collider collider) {
         if (collider instanceof Henk) {
-
             remove();
         }
     }
 
     @Override
     public void notifyBoundaryCrossing(SceneBorder sceneBorder) {
-        if (sceneBorder == sceneBorder.TOP) {
+        if (sceneBorder == SceneBorder.TOP) {
             remove();
         }
 

@@ -21,7 +21,6 @@ public class Frank extends Enemy {
     protected void setupEntities() {
         addEntity(new Sprite("sprites/frank.png", new Coordinate2D(0, 0), 75, 1, 1, 0));
         addEntity(new Hitbox(new Coordinate2D(0, 0), 65, 75));
-
     }
 
 

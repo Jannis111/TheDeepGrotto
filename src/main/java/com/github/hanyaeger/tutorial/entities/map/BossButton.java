@@ -10,6 +10,7 @@ import com.github.hanyaeger.tutorial.entities.Henk;
 import java.util.Random;
 
 public class BossButton extends SpriteEntity implements Collider, Collided {
+
     public BossButton(Coordinate2D location, Size size, String resource) {
         super(resource, location, size);
     }

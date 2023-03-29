@@ -9,6 +9,7 @@ import javafx.scene.input.KeyCode;
 import java.util.Set;
 
 public class Enemy extends DynamicCompositeEntity implements KeyListener {
+    
     public Enemy(Coordinate2D location) {
         super(location);
     }

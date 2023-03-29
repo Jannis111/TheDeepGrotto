@@ -12,6 +12,7 @@ import com.github.hanyaeger.tutorial.entities.text.BossHealthText;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 
 public class BossLevel extends LevelOne {
+
     public BossLevel(TheDeepGrotto theDeepGrotto) {
         super(theDeepGrotto);
     }

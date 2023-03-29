@@ -5,6 +5,7 @@ import com.github.hanyaeger.tutorial.entities.items.NukeBomb;
 import com.github.hanyaeger.tutorial.entities.items.StrongBomb;
 
 public class RoomOneLevelOneMap extends TileMap {
+
     @Override
     public void setupEntities() {
         addEntity(1, Wall.class, "sprites/wall.png");

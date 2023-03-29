@@ -6,6 +6,7 @@ import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
 
 public class LevelOne extends DynamicScene implements TileMapContainer, EntitySpawnerContainer {
+
     protected TheDeepGrotto theDeepGrotto;
 
     public LevelOne(TheDeepGrotto theDeepGrotto) {

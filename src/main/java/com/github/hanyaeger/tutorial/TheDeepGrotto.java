@@ -11,6 +11,7 @@ import com.github.hanyaeger.tutorial.scenes.levels.RoomOneLevelOne;
 import com.github.hanyaeger.tutorial.scenes.levels.RoomTwoLevelOne;
 
 public class TheDeepGrotto extends YaegerGame {
+
     public static void main(String[] args) {
         launch(args);
     }

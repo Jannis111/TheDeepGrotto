@@ -12,11 +12,11 @@ import javafx.scene.paint.Color;
 import java.util.Random;
 
 public class HitboxGoblinMobile extends RectangleEntity implements Collider, Collided {
-    private int direction;
-    private int width;
-    private int heigth;
-    GoblinMobile goblinMobile;
 
+    private int direction;
+    private final int width;
+    private final int heigth;
+    GoblinMobile goblinMobile;
     Sprite goblinMobileSprite;
 
     protected HitboxGoblinMobile(Coordinate2D initialLocation, GoblinMobile goblinMobile, Sprite goblinMobileSprite, int width, int height, int direction) {
@@ -36,10 +36,7 @@ public class HitboxGoblinMobile extends RectangleEntity implements Collider, Col
     public void onCollision(Collider collider) {
         if (collider instanceof Wall || collider instanceof Door) {
 
-
-            int directionArray[] = {0, 90, 180, 270};
-
-            System.out.println(getAnchorLocation());
+            int[] directionArray = {0, 90, 180, 270};
 
             int randomNumber = new Random().nextInt(4);
             if (direction == 0 && !(randomNumber == 0)) {
@@ -57,7 +54,6 @@ public class HitboxGoblinMobile extends RectangleEntity implements Collider, Col
             } else if (direction == 270 && !(randomNumber == 3)) {
                 direction = directionArray[randomNumber];
                 setAnchorLocationX(getAnchorLocation().getX() + 3);
-
                 //direction = 90;
             }
             goblinMobile.setMotion(2, direction);
