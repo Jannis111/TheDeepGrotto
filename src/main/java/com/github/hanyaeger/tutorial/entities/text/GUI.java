@@ -10,7 +10,7 @@ public class GUI extends TextEntity {
     public GUI(Coordinate2D initialLocation) {
         super(initialLocation);
 
-        setFont(Font.font("Serif", FontWeight.BOLD, 30));
+        setFont(Font.font("Serif", FontWeight.BOLD, 28));
         setFill(Color.BLACK);
     }
 

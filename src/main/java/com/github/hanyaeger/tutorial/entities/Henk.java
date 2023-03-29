@@ -25,7 +25,7 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
     private static int bossHealth = 10;
     public static int strongBomb = 0;
     public static int nukeBomb = 0;
-    public static int currentScene = 5;
+    private static int currentScene = 5;
     private final TheDeepGrotto theDeepGrotto;
     private final GUI gui;
 
@@ -46,7 +46,6 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
 
     @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
-        //System.out.println(getAnchorLocation());
         if (pressedKeys.contains(KeyCode.LEFT)) {
             setMotion(3, 270d);
             direction = 270;
@@ -94,7 +93,6 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         } else if (collider instanceof Door) {
             this.theDeepGrotto.setActiveScene(++currentScene);
         } else if (collider instanceof BossButton) {
-            //Hier moet iets worden aangeroepen dat Frank damage krijgt.
             bossHealth--;
             bossHealthText.setBossHealthText(bossHealth);
         } else if (collider instanceof Arrow) {
@@ -106,16 +104,11 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
         }
         if (health == 0) {
             this.theDeepGrotto.setActiveScene(3);
-            health = 10;
-            strongBomb = 0;
-            nukeBomb = 0;
+            resetStats();
         }
         if (bossHealth < 1) {
-            bossHealth = 10;
             this.theDeepGrotto.setActiveScene(4);
-            health = 10;
-            strongBomb = 0;
-            nukeBomb = 0;
+            resetStats();
         }
     }
 
@@ -142,5 +135,13 @@ public class Henk extends DynamicSpriteEntity implements KeyListener, Collider, 
 
     public int getBossHealth() {
         return bossHealth;
+    }
+
+    public void resetStats() {
+        health = 10;
+        bossHealth = 10;
+        strongBomb = 0;
+        nukeBomb = 0;
+        currentScene = 5;
     }
 }

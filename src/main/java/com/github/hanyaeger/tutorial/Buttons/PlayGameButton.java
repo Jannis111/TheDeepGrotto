@@ -7,11 +7,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 public class PlayGameButton extends Button {
-    TheDeepGrotto theDeepGrotto;
 
     public PlayGameButton(Coordinate2D initialLocation, TheDeepGrotto theDeepGrotto, String nameButton, Color color, Font font) {
         super(initialLocation, theDeepGrotto, nameButton, color, font);
-        this.theDeepGrotto = theDeepGrotto;
     }
 
     @Override

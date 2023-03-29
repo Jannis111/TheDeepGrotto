@@ -10,11 +10,11 @@ public class BossHealthText extends TextEntity {
     public BossHealthText(Coordinate2D initialLocation) {
         super(initialLocation);
 
-        setFont(Font.font("Serif", FontWeight.BOLD, 30));
+        setFont(Font.font("Serif", FontWeight.BOLD, 28));
         setFill(Color.BLACK);
     }
 
     public void setBossHealthText(int bossHealth) {
-        setText("Boss Health: " + bossHealth);
+        setText("| Boss Health: " + bossHealth);
     }
 }

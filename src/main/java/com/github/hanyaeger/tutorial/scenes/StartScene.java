@@ -1,6 +1,5 @@
 package com.github.hanyaeger.tutorial.scenes;
 
-import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.tutorial.Buttons.PlayGameButton;
@@ -10,21 +9,17 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 public class StartScene extends SceneBody {
-    TheDeepGrotto theDeepGrotto;
 
     public StartScene(TheDeepGrotto theDeepGrotto) {
-        this.theDeepGrotto = theDeepGrotto;
+        super(theDeepGrotto);
     }
 
     public void setupEntities() {
         var startSceneText = new TextEntity(
                 new Coordinate2D(getWidth() / 2, getHeight() / 2), "The Deep Grotto"
         );
-        startSceneText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        startSceneText.setFill(Color.WHITE);
-        startSceneText.setFont(Font.font("Serif", FontWeight.BOLD, 70));
+        setTextStyle(startSceneText);
         addEntity(startSceneText);
-
         addEntity(new PlayGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 75), theDeepGrotto, "Start game", Color.WHITE, Font.font("Roboto", FontWeight.BOLD, 30)));
     }
 

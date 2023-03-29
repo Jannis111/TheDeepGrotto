@@ -1,6 +1,5 @@
 package com.github.hanyaeger.tutorial.scenes;
 
-import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.impl.TextEntity;
 import com.github.hanyaeger.tutorial.Buttons.ExiteGameButton;
@@ -11,19 +10,16 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
 public class WinScene extends SceneBody {
-    TheDeepGrotto theDeepGrotto;
 
     public WinScene(TheDeepGrotto theDeepGrotto) {
-        this.theDeepGrotto = theDeepGrotto;
+        super(theDeepGrotto);
     }
 
     public void setupEntities() {
         var winSceneText = new TextEntity(
                 new Coordinate2D(getWidth() / 2, getHeight() / 2), "You win"
         );
-        winSceneText.setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        winSceneText.setFill(Color.WHITE);
-        winSceneText.setFont(Font.font("Serif", FontWeight.BOLD, 70));
+        setTextStyle(winSceneText);
         addEntity(winSceneText);
         addEntity(new StartGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 75), theDeepGrotto, "Start game", Color.WHITE, Font.font("Roboto", FontWeight.BOLD, 30)));
         addEntity(new ExiteGameButton(new Coordinate2D(getWidth() / 2, getHeight() / 2 + 150), theDeepGrotto, "Exit game", Color.WHITE, Font.font("Roboto", FontWeight.BOLD, 30)));

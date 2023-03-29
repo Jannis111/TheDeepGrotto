@@ -1,8 +1,6 @@
 package com.github.hanyaeger.tutorial.scenes.levels;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.scenes.DynamicScene;
-import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
 import com.github.hanyaeger.tutorial.entities.Henk;
 import com.github.hanyaeger.tutorial.entities.enemies.GoblinMobile.GoblinMobile;
@@ -12,19 +10,10 @@ import com.github.hanyaeger.tutorial.entities.map.RoomTwoLevelOneMap;
 import com.github.hanyaeger.tutorial.entities.text.BossHealthText;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 
-public class RoomTwoLevelOne extends DynamicScene implements TileMapContainer {
-    private final TheDeepGrotto theDeepGrotto;
+public class RoomTwoLevelOne extends LevelOne {
 
     public RoomTwoLevelOne(TheDeepGrotto theDeepGrotto) {
-        this.theDeepGrotto = theDeepGrotto;
-
-    }
-
-
-    @Override
-    public void setupScene() {
-        setBackgroundAudio("audio/backgroundMusic.mp3");
-        setBackgroundImage("backgrounds/levelBackground.png");
+        super(theDeepGrotto);
     }
 
     @Override
@@ -41,14 +30,11 @@ public class RoomTwoLevelOne extends DynamicScene implements TileMapContainer {
         GoblinMobile goblinMobile = new GoblinMobile(new Coordinate2D(400, 200));
         addEntity(goblinMobile);
         Henk player = new Henk(new Coordinate2D(60, 60), theDeepGrotto, gui, bossHealthText);
-
         addEntity(player);
     }
 
     @Override
     public void setupTileMaps() {
-
         addTileMap(new RoomTwoLevelOneMap());
     }
-
 }

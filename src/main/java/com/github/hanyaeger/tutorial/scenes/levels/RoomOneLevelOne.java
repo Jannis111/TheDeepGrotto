@@ -1,8 +1,6 @@
 package com.github.hanyaeger.tutorial.scenes.levels;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.scenes.DynamicScene;
-import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.tutorial.TheDeepGrotto;
 import com.github.hanyaeger.tutorial.entities.Henk;
 import com.github.hanyaeger.tutorial.entities.enemies.GoblinMobile.GoblinMobile;
@@ -12,11 +10,9 @@ import com.github.hanyaeger.tutorial.entities.map.RoomOneLevelOneMap;
 import com.github.hanyaeger.tutorial.entities.text.BossHealthText;
 import com.github.hanyaeger.tutorial.entities.text.GUI;
 
-public class RoomOneLevelOne extends DynamicScene implements TileMapContainer {
-    private final TheDeepGrotto theDeepGrotto;
-
+public class RoomOneLevelOne extends LevelOne {
     public RoomOneLevelOne(TheDeepGrotto theDeepGrotto) {
-        this.theDeepGrotto = theDeepGrotto;
+        super(theDeepGrotto);
     }
 
     @Override

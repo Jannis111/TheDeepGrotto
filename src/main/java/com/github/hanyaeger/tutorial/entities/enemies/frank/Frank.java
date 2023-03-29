@@ -9,8 +9,7 @@ import com.github.hanyaeger.tutorial.entities.text.BossHealthText;
 
 public class Frank extends Enemy {
 
-
-    private BossHealthText bossHealthText;
+    private final BossHealthText bossHealthText;
 
     public Frank(Coordinate2D location, BossHealthText bossHealthText, int bossHealth) {
         super(location);
